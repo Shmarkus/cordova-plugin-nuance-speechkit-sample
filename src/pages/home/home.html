@@ -1,14 +1,20 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Nuance SpeechKit Example
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
   <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
+    Write something in english in the field below and press "speak" for TTS (only IOS and Android)
   </p>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Text to speak</ion-label>
+      <ion-input type="text" name="ttsInput" [(ngModel)]="ttsInput"></ion-input>
+    </ion-item>
+  </ion-list>
+  <button ion-button block (click)="speak()">Speak</button>
 </ion-content>
